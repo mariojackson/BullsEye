@@ -14,6 +14,7 @@
 		ACB869E728DB733600BF6197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB869E628DB733600BF6197 /* Assets.xcassets */; };
 		ACB869EA28DB733600BF6197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB869E828DB733600BF6197 /* LaunchScreen.storyboard */; };
 		ACB869F228DE522900BF6197 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB869F128DE522900BF6197 /* AboutViewController.swift */; };
+		ACB869F428DE56DC00BF6197 /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = ACB869F328DE56DC00BF6197 /* BullsEye.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		ACB869E928DB733600BF6197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACB869EB28DB733600BF6197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACB869F128DE522900BF6197 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		ACB869F328DE56DC00BF6197 /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		ACB869DC28DB733600BF6197 /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				ACB869F328DE56DC00BF6197 /* BullsEye.html */,
 				ACB869F128DE522900BF6197 /* AboutViewController.swift */,
 				ACB869DD28DB733600BF6197 /* AppDelegate.swift */,
 				ACB869DF28DB733600BF6197 /* SceneDelegate.swift */,
@@ -129,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACB869EA28DB733600BF6197 /* LaunchScreen.storyboard in Resources */,
+				ACB869F428DE56DC00BF6197 /* BullsEye.html in Resources */,
 				ACB869E728DB733600BF6197 /* Assets.xcassets in Resources */,
 				ACB869E528DB733600BF6197 /* Main.storyboard in Resources */,
 			);
