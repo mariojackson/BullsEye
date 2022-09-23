@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet var slider: UISlider!
+    @IBOutlet var targetLabel: UILabel!
     
     var currentValue: Int = 0
     var targetValue: Int = 0
@@ -23,7 +24,7 @@ class ViewController: UIViewController {
                       "\n The target value is \(targetValue)"
         
         let alert = UIAlertController(
-            title: "Current Value",
+            title: "Bull's Eye",
             message: message,
             preferredStyle: .alert
         )
@@ -48,6 +49,11 @@ class ViewController: UIViewController {
         targetValue = Int.random(in: 0...100)
         currentValue = 50
         slider.value = Float(currentValue)
+        updateLabels()
+    }
+    
+    func updateLabels() {
+        targetLabel.text = String(targetValue)
     }
 
 }
