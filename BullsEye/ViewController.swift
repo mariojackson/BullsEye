@@ -10,9 +10,13 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var slider: UISlider!
     @IBOutlet var targetLabel: UILabel!
+    @IBOutlet var totalScoreLabel: UILabel!
+    @IBOutlet var currentRoundLabel: UILabel!
     
-    var currentValue: Int = 0
-    var targetValue: Int = 0
+    var currentValue = 0
+    var targetValue = 0
+    var totalScore = 0
+    var round = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +25,12 @@ class ViewController: UIViewController {
 
     @IBAction func showAlert() {
         let difference = abs(currentValue - targetValue)
+        let possibleMaxRoundPoints = 100
+        let playersPoints = possibleMaxRoundPoints - difference
         
-        let message = "The value of the slider is: \(currentValue)" +
-                      "\n The target value is \(targetValue)" +
-                      "\nThe differene is: \(difference)"
+        totalScore += playersPoints
+        
+        let message = "You scored \(playersPoints) points"
         
         let alert = UIAlertController(
             title: "Bull's Eye",
@@ -49,6 +55,7 @@ class ViewController: UIViewController {
     }
     
     func startNewRound() {
+        round += 1
         targetValue = Int.random(in: 0...100)
         currentValue = 50
         slider.value = Float(currentValue)
@@ -57,6 +64,8 @@ class ViewController: UIViewController {
     
     func updateLabels() {
         targetLabel.text = String(targetValue)
+        totalScoreLabel.text = String(totalScore)
+        currentRoundLabel.text = String(round)
     }
 
 }
