@@ -26,14 +26,14 @@ class ViewController: UIViewController {
     @IBAction func showAlert() {
         let difference = abs(currentValue - targetValue)
         let possibleMaxRoundPoints = 100
-        let playersPoints = possibleMaxRoundPoints - difference
+        let playersPoints = difference == 0 ? 200 : possibleMaxRoundPoints - difference
         
         totalScore += playersPoints
         
         let message = "You scored \(playersPoints) points"
         
         let alert = UIAlertController(
-            title: "Bull's Eye",
+            title: getAlertTitle(difference),
             message: message,
             preferredStyle: .alert
         )
@@ -66,6 +66,23 @@ class ViewController: UIViewController {
         targetLabel.text = String(targetValue)
         totalScoreLabel.text = String(totalScore)
         currentRoundLabel.text = String(round)
+    }
+    
+    func getAlertTitle(_ difference: Int) -> String {
+        let title: String
+        
+        switch difference {
+        case 0:
+            title = "Perfect!"
+        case 0...5:
+            title = "You almost had it!"
+        case 6...10:
+            title = "Not bad!"
+        default:
+            title = "Focus!"
+        }
+        
+        return title
     }
 
 }
