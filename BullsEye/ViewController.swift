@@ -40,18 +40,23 @@ class ViewController: UIViewController {
         
         let action = UIAlertAction(
             title: "OK",
-            style: .default,
-            handler: nil
-        )
+            style: .default
+        ) { _ in
+            self.startNewRound()
+        }
         
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
-        
-        startNewRound()
     }
     
     @IBAction func sliderMoved(_ slider: UISlider) {
         currentValue = lroundf(slider.value)
+    }
+    
+    @IBAction func startOver() {
+        round = 0
+        totalScore = 0
+        startNewRound()
     }
     
     func startNewRound() {
