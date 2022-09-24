@@ -65,6 +65,14 @@ class ViewController: UIViewController {
         currentValue = 50
         slider.value = Float(currentValue)
         updateLabels()
+        
+        let transition = CATransition()
+        transition.type = CATransitionType.fade
+        transition.duration = 0.3
+        transition.timingFunction = CAMediaTimingFunction(
+            name: CAMediaTimingFunctionName.easeOut
+        )
+        view.layer.add(transition, forKey: nil)
     }
     
     func updateLabels() {
